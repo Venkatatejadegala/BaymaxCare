@@ -17,6 +17,7 @@
     "date-fns": "^2.30.0",
     "framer-motion": "^10.16.16",
     "lucide-react": "^0.294.0",
+    "mongoose": "^9.7.4",
     "next": "^14.2.32",
     "next-auth": "^4.24.11",
     "postcss": "^8",
