@@ -1,15 +1,21 @@
 import mongoose, { Schema } from 'mongoose';
 
-export interface IUser extends mongoose.Document {
+export interface IUser {
+  name: string;
   email: string;
   passwordHash: string;
   role: 'patient' | 'doctor' | 'admin';
-  createdAt: Date;
-  updatedAt: Date;
+  createdAt?: Date;
+  updatedAt?: Date;
 }
 
 const UserSchema = new Schema<IUser>(
   {
+    name: {
+      type: String,
+      required: [true, 'Name is required'],
+      trim: true,
+    },
     email: {
       type: String,
       required: [true, 'Email is required'],
@@ -36,6 +42,6 @@ const UserSchema = new Schema<IUser>(
   }
 );
 
-const User = mongoose.models.User || mongoose.model<IUser>('User', UserSchema);
+const User: mongoose.Model<IUser> = mongoose.models.User || mongoose.model<IUser>('User', UserSchema);
 
 export { User };

@@ -1,29 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 /* Mobile-specific optimizations */
-  @layer base {
-    html {
-      /* Prevent zoom on input focus on iOS */
-      -webkit-text-size-adjust: 100%;
-      /* Improve touch scrolling */
-      -webkit-overflow-scrolling: touch;
-    }
+@layer base {
+  html {
+    /* Prevent zoom on input focus on iOS */
+    -webkit-text-size-adjust: 100%;
+    /* Improve touch scrolling */
+    -webkit-overflow-scrolling: touch;
+  }
 
-    body {
-      /* Improve touch interactions */
-      touch-action: manipulation;
-      /* Ensure full width */
-      width: 100%;
-      max-width: 100vw;
-    }
+  body {
+    /* Improve touch interactions */
+    touch-action: manipulation;
+    /* Ensure full width */
+    width: 100%;
+    max-width: 100vw;
+  }
 
-    /* Prevent content from overflowing */
-    * {
-      box-sizing: border-box;
-    }
-  
+  /* Prevent content from overflowing */
+  * {
+    box-sizing: border-box;
+  }
+
   /* Prevent zoom on input focus */
   input[type="text"],
   input[type="email"],
@@ -33,20 +35,18 @@
   select {
     font-size: 16px !important;
   }
-  
+
   /* Improve button touch targets */
   button {
     min-height: 44px;
     min-width: 44px;
   }
-  
+
   /* Better touch targets for mobile */
   .touch-manipulation {
     touch-action: manipulation;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 @layer base {
   html {
